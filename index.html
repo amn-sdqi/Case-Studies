@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Case Studies Dashboard</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+		<style>
+			.card-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+				gap: 1.5rem;
+				margin-top: 2rem;
+			}
+			.card {
+				padding: 1.5rem;
+				border: 1px solid #ddd;
+				border-radius: 10px;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				transition: transform 0.2s ease;
+			}
+			.card:hover {
+				transform: translateY(-5px);
+			}
+			.card h3 {
+				margin-top: 0;
+			}
+			.card p {
+				color: #555;
+			}
+			.card a {
+				margin-top: 1rem;
+				display: inline-block;
+				text-decoration: none;
+				color: #fff;
+				background-color: #007bff;
+				padding: 0.5rem 1rem;
+				border-radius: 5px;
+				transition: background-color 0.2s ease;
+			}
+			.card a:hover {
+				background-color: #0056b3;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="container-fluid">
+			<ul>
+				<li><strong>Case Studies Dashboard</strong></li>
+			</ul>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#" role="button">Contact</a></li>
+			</ul>
+		</nav>
+
+		<main class="container">
+			<header>
+				<h1>Welcome to My Machine Learning Case Studies</h1>
+				<p>
+					Explore the fascinating projects I've worked on. Click on any case
+					study to learn more.
+				</p>
+			</header>
+
+			<div class="card-grid">
+				<!-- Card 1 -->
+				<div class="card">
+					<h3>Case Study 1: Predicting House Prices</h3>
+					<p>
+						A deep dive into predicting house prices using regression models and
+						feature engineering techniques.
+					</p>
+					<a
+						href="House Price prediction/ML_Batch_HousePriceProject.html"
+						target="_blank"
+						>View Case Study</a
+					>
+				</div>
+
+				<!-- Card 2 -->
+				<div class="card">
+					<h3>Case Study 2: Enseble Learning</h3>
+					<p>
+						Exploring convolutional neural networks to classify images in the
+						CIFAR-10 dataset with high accuracy.
+					</p>
+					<a href="Ensemble Learning/main2.html" target="_blank"
+						>View Case Study</a
+					>
+				</div>
+
+				<!-- Card 3 -->
+				<div class="card">
+					<h3>Case Study 3: Logistic Regression</h3>
+					<p>
+						Analyzing customer reviews to detect sentiment using natural
+						language processing techniques.
+					</p>
+					<a href="Loan Tap/main.html" target="_blank">View Case Study</a>
+				</div>
+
+				<div class="card">
+					<h3>Case Study 4: Data Preprocessing & EDA</h3>
+					<p>
+						Analyzing customer reviews to detect sentiment using natural
+						language processing techniques.
+					</p>
+					<a href="Superstore/main.html" target="_blank">View Case Study</a>
+				</div>
+
+				<div class="card">
+					<h3>Case Study 5: Decision Tree & KNN</h3>
+					<p>
+						Analyzing customer reviews to detect sentiment using natural
+						language processing techniques.
+					</p>
+					<a href="Student Performance/main.html" target="_blank"
+						>View Case Study</a
+					>
+				</div>
+
+				<!-- Add more cards as needed -->
+			</div>
+		</main>
+
+		<footer class="container">
+			<small>
+				<a href="https://github.com/yourgithubprofile" target="_blank"
+					>GitHub</a
+				>
+				•
+				<a
+					href="https://www.linkedin.com/in/yourlinkedinprofile"
+					target="_blank"
+					>LinkedIn</a
+				>
+			</small>
+		</footer>
+	</body>
+</html>
