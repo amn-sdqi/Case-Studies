@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Clustering Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Patient Clustering for Triage Prioritization</h1>
+        <p>Using K-Means, Gaussian Mixture Model, and Hierarchical Clustering</p>
+    </header>
+
+    <section id="overview">
+        <h2>Project Overview</h2>
+        <p>
+            This project aims to segment patients based on their symptoms and medical history to assist in triage decision-making.
+            Using unsupervised learning, we explore how patients can be grouped based on similarities, which may help in personalized treatment plans.
+        </p>
+    </section>
+
+    <section id="dataset">
+        <h2>Dataset Information</h2>
+        <p>
+            The dataset includes demographic, lifestyle, and health-related features:
+        </p>
+        <ul>
+            <li>Age, Gender</li>
+            <li>Cholesterol Levels</li>
+            <li>Blood Pressure</li>
+            <li>BMI</li>
+            <li>Diabetes History</li>
+            <li>Smoking Status</li>
+        </ul>
+    </section>
+
+    <section id="methodology">
+        <h2>Clustering Methodologies</h2>
+        <div class="method">
+            <h3>K-Means Clustering</h3>
+            <p>
+                K-Means was applied to segment the patients into different risk categories.
+                The **Elbow Method** and **Silhouette Score** were used to determine the optimal number of clusters.
+            </p>
+            <img src="elbow_method.png" alt="Elbow Method &Silhouette Score">
+        </div>
+
+        <div class="method">
+            <h3>Gaussian Mixture Model (GMM)</h3>
+            <p>
+                GMM was used to identify overlapping patient groups, allowing for soft clustering.
+                This helped in understanding how conditions transition between different levels of risk.
+            </p>
+            <img src="gmm_clusters.png" alt="GMM Clustering">
+        </div>
+
+        <div class="method">
+            <h3>Hierarchical Clustering</h3>
+            <p>
+                This approach helped visualize patient subgroups in a **dendrogram**, giving insights into risk stratification.
+            </p>
+            <img src="hierarchical_clusters.png" alt="Hierarchical Clustering">
+        </div>
+    </section>
+
+    <section id="insights">
+        <h2>Key Insights</h2>
+        <p>
+            After performing clustering, we analyzed the key characteristics of each patient segment:
+        </p>
+        <ul>
+            <li>Cluster 0: Younger patients, low risk</li>
+            <li>Cluster 1: Patients with moderate risk factors</li>
+            <li>Cluster 2: High cholesterol and BP, higher risk</li>
+            <li>Cluster 3: Severe cases, requiring urgent medical attention</li>
+        </ul>
+        <p>
+            Comparing these clusters with the original triage labels showed that clustering aligns well with real-world risk levels, but some refinements are needed.
+        </p>
+    </section>
+
+    <section id="conclusion">
+        <h2>Conclusions & Next Steps</h2>
+        <p>
+            Clustering provides valuable insights for triage, but real-world applications may require hybrid approaches:
+        </p>
+        <ul>
+            <li>Using **supervised learning** for improved prediction.</li>
+            <li>Applying **dimensionality reduction** to refine clustering results.</li>
+            <li>Deploying the model in a real hospital setting for further testing.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Created by [Your Name] | Connect on <a href="https://www.linkedin.com">LinkedIn</a></p>
+    </footer>
+
+</body>
+</html>
