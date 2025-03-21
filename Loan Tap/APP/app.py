@@ -5,11 +5,7 @@ import re
 import pandas as pd
 
 # Load models and encoders
-# Define the correct path
-model_path = os.path.join(os.path.dirname(__file__), "loan_pred.pkl")
-
-# Debugging: Print file path and check if it exists
-st.write(f"Looking for model at: {model_path}")
+model_path = "case-studies/Loan Tap/APP/loan_pred.pkl"
 
 if not os.path.exists(model_path):
     st.error(f"Model file '{model_path}' not found. Please upload it.")
