@@ -1,4 +1,5 @@
 streamlit
+pickel
+os
 pandas
 scikit-learn 
-pickel

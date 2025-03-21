@@ -1,11 +1,18 @@
+import os
 import streamlit as st
 import pickle
 import re
 import pandas as pd
 
 # Load models and encoders
-with open("loan_pred.pkl", "rb") as file1:
-    model = pickle.load(file1)
+model_path = "loan_pred.pkl"
+
+if not os.path.exists(model_path):
+    st.error(f"Model file '{model_path}' not found. Please upload it.")
+else:
+    with open(model_path, "rb") as file1:
+        model = pickle.load(file1)
+    st.success("Model loaded successfully!")
 
 with open("emp_title_enc.pkl", "rb") as file2:
     emp_title_enc = pickle.load(file2)
