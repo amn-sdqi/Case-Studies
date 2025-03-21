@@ -1,24 +1,19 @@
 import os
 import streamlit as st
-import pickle
+import joblib
 import re
 import pandas as pd
 
 # Load models and encoders
-model_path = "Loan Tap/models/loan_pred.pkl"
 
-if not os.path.exists(model_path):
-    st.error(f"Model file '{model_path}' not found. Please upload it.")
-else:
-    with open(model_path, "rb") as file1:
-        model = pickle.load(file1)
-    st.success("Model loaded successfully!")
 
-with open("Loan Tap/models/emp_title_enc.pkl", "rb") as file2:
-    emp_title_enc = pickle.load(file2)
+model = joblib.load("Loan Tap/models/loan_pred.joblib")
+st.success("Model loaded successfully!")
 
-with open("Loan Tap/models/title_enc.pkl", "rb") as file3:
-    title_enc = pickle.load(file3)
+emp_title_enc = joblib.load("Loan Tap/models/emp_title_enc.joblib")
+
+
+title_enc = joblib.load("Loan Tap/models/title_enc.joblib")
 
 # Define mappings
 grade_mapping = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7}
