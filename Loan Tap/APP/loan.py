@@ -16,8 +16,6 @@ with open("emp_title_enc.pkl", "rb") as file2:
 with open("title_enc.pkl", "rb") as file3:
     title_enc = pickle.load(file3)
 
-with open("scaler.pkl", "rb") as file4:
-    scaler = pickle.load(file4)
 
 # Define mappings
 grade_mapping = {"A": 1, "B": 2, "C": 3, "D": 4, "E": 5, "F": 6, "G": 7}
@@ -123,17 +121,11 @@ async def predict(request: Request):
 
     # Encode categorical features
     encoded_data = encoding(dataframe)
-
-    # Scaling data
-    scaled_data = scaler.transform(
-        encoded_data
-    )  # Fix: Changed fit_tranfrom() to transform()
-
+    
     # Making prediction
     result = model.predict(encoded_data)
 
     return {
         "Loan Status": result.tolist(),
         "encoded": encoded_data.to_dict(orient="records")[0],
-        #  "Scaled Data": scaled_data.tolist()
     }  # Convert numpy array to list for JSON response
