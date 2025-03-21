@@ -5,7 +5,7 @@ import re
 import pandas as pd
 
 # Load models and encoders
-model_path = "case-studies/Loan Tap/APP/loan_pred.pkl"
+model_path = "Loan Tap\models\loan_pred.pkl"
 
 if not os.path.exists(model_path):
     st.error(f"Model file '{model_path}' not found. Please upload it.")
@@ -14,10 +14,10 @@ else:
         model = pickle.load(file1)
     st.success("Model loaded successfully!")
 
-with open("./emp_title_enc.pkl", "rb") as file2:
+with open("Loan Tap\models\emp_title_enc.pkl", "rb") as file2:
     emp_title_enc = pickle.load(file2)
 
-with open("./title_enc.pkl", "rb") as file3:
+with open("Loan Tap\models\ title_enc.pkl", "rb") as file3:
     title_enc = pickle.load(file3)
 
 # Define mappings
